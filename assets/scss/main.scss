@@ -1,0 +1,518 @@
+@charset "utf-8";
+@import "common";
+
+
+html {
+    font-family: $font-family-basic;
+}
+
+.container {
+    width: 86rem;
+    margin: auto;
+
+    @include sp {
+        width: 100%;
+        padding: 0 1.6rem;
+    }
+}
+
+// 共通クラス
+
+.common__title {
+    text-align: center;
+    font-size: 3.6rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    @include sp {
+        font-size: 2.8rem;    
+    }
+
+    &--contactTitle {
+        padding-bottom: 0;
+
+        @include sp {
+            font-size: 2.4rem;
+        }
+    }
+
+    &--withborder {
+
+        &::after {
+            content: "";
+            background-color: #000;
+            width: 10rem;    
+            height: 0.3rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include sp {
+                width: 8rem;
+            }
+        }
+    }
+}
+
+.toTop {
+    position: fixed;
+    z-index: 10;
+    width: 5rem;
+    right: 5%;
+    top: 90%;
+    display: none;
+}
+
+// section__top
+
+.main {
+
+    &__top {
+        padding: 28rem 0 23rem;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+
+        @include sp {
+            padding: 1.87rem 0;
+            position: static;
+            transform: translateX(0);
+            width: 100%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(../img/mainvisual1.jpg) right 30% top 50% no-repeat;
+            background-size: cover;
+            width: 74%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            box-shadow: inset 0 0 2rem 2rem #fff;  
+
+            @include sp {
+                position: relative;
+                width: 100vw;
+                height: 30rem;
+                left: 50%;
+                transform: translateX(-50%);
+                background-position:  center;
+                display: block;
+            }
+        }
+
+        &__title {
+            margin-left: 10%;
+            text-shadow: 0 0.4rem 0.6rem #fff;
+            font-size: 4.6rem;
+            font-weight: bold;
+
+            @include sp {
+                margin: 1rem 0 0;
+                font-size: 2.8rem;
+            }
+        }
+
+        &__btn {
+            display: inline-block;
+            width: 47.9rem;
+            margin: 3rem 0 0 10%;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 2.4rem;
+            color: #fff;
+            background-color: #FF0033;
+            border-radius: 1rem;
+            position: relative;
+            transition-duration: 0.3s;
+            box-shadow: -0.1rem -0.1rem 0.1rem #7A051C;
+
+            @include sp {
+                width: 100%;
+                margin: 1rem 0 0;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                transition-duration: 0.3s;
+
+                @include sp {
+                    transition: none;
+                    transition-duration: 0;
+                }                
+            }
+            
+
+            &::after {
+                content: "";
+                width: 1.6rem;
+                height: 1.6rem;
+                border-top: solid 0.3rem #fff;
+                border-right: solid 0.3rem #fff;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 2.6rem;
+                right: 3rem;
+            }
+        }
+    }
+
+    // section__about
+
+    .about {
+        padding-top: 12rem;
+
+        @include sp {
+            padding-top: 8rem;
+        }
+
+        &__wrapper {
+            padding: 8rem 0;
+            position: relative;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100%;
+            background-color: #FF2A2A;
+            margin-top: 8rem;
+
+            @include sp {
+                margin-top: 4rem;
+            }
+
+            &__item {
+                width: 50%;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                padding: 7rem 0;
+
+                @include sp {
+                    width: 95%;
+                    padding: 2.4rem 0;
+                }
+
+                &--pc {
+                    border-radius: 0 2rem 2rem 0;
+
+                }
+
+                &__image {
+
+                    &--pc {
+                        width: 8.7rem;
+                        margin-left: auto; 
+
+                        @include sp {
+                            margin-left: 2rem;
+                        }
+                    }
+
+                    &--teacher {
+                        width: 5.1rem;
+                        margin-left: 15.8rem;
+
+                        @include sp {
+                            margin-left: 2rem;
+                        }
+                    }
+                }
+
+                &__text {
+                    margin-left: 3rem;
+                    margin-right: 16rem;
+
+                    @include sp {
+                        margin: 0 0 0 3rem;
+                    }
+
+                    &__top {
+                        color: #FF2A2A;
+                        font-size: 2.8rem;
+                        font-weight: bold;
+
+                        @include sp {
+                            font-size: 2.4rem;
+                        }
+                    }
+
+                    &__bottom {
+                        font-size: 1.8rem;
+                    }    
+                } 
+                
+                &--teacher {
+                    border-radius: 2rem 0 0 2rem;
+                    margin: 4rem 0 0 auto;
+
+                }                
+            }
+        }
+    }
+
+    .js-modal {
+        width: 100rem;
+    }
+
+    // voice
+
+    .voice {
+        padding: 12rem 0;
+
+        @include sp {
+            padding: 8rem 0;
+        }
+
+        &__wrapper {
+            margin-top: 8rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+
+            @include sp {
+                margin-top: 4rem;
+            }
+
+            &__text {
+                width: 50.8rem;
+                background-color: #E9F1FB;
+                padding: 2rem;
+                font-size: 1.6rem;
+                border-radius: 2rem;
+                position: relative;
+
+                @include sp {
+                    width: 100%;
+                }
+
+                &--left {
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        border: 1.2rem solid transparent;
+                        border-right: 1.5rem solid #E9F1FB;
+                        top: 50%;
+                        left: -2rem;
+
+                        @include sp {
+                            transform:  translateX(-50%) rotate(-90deg);
+                            top: 100%;
+                            left: 50%;
+                        }
+                    }
+                }
+
+                &--right {
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        border: 1.2rem solid transparent;
+                        border-left: 1.5rem solid #E9F1FB;
+                        top: 25%;
+                        margin-right: -2rem;
+
+                        @include sp {
+                            transform:  translateX(-50%) rotate(90deg);
+                            top: 100%;
+                            left: 50%;
+                        }
+
+                    }
+                }
+            }
+
+            &__image {
+                width: 12rem;
+                background-color: #CCCCCC;
+                border-radius: 50%;
+
+                &--left {
+                    margin-right: 2.5rem;
+
+                    @include sp {
+                        margin: 3rem auto;
+                    }
+                }
+
+                &--right {
+                    margin-left: 2.5rem;
+
+                    @include sp {
+                        margin: 3rem auto;
+                    }
+                }
+            }
+
+            &--right {
+                flex-direction: row;
+            }
+        }
+    }
+
+    // service
+
+    .service {
+        padding: 6rem 0;
+        position: relative;
+        z-index: 1;
+
+        @include sp {
+            padding: 4rem 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #E8E8E8;
+            background: url(https://code-step.com/demo/html/lp/img/bg.gif);
+            z-index: -1;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            // margin: 8rem -4rem 0 0;
+            margin: 8rem 0 0 0;
+
+            @include sp {
+                margin: 4rem 0 0 0;
+            }
+
+            &__list {
+                width: 41rem;
+                padding: 6rem;
+                // margin-right: 4rem;
+                background-color: #fff;
+                border-radius: 2rem;
+
+                @include sp {
+                    width: 100%;
+                    margin: 3.2rem 0 0;
+                    padding: 3rem 3.2rem;
+                }
+
+                // &--bottom {
+                //     margin-top: 3.2rem;
+                // }
+
+                &__title {
+                    font-size: 2.8rem;
+                    text-align: center;
+
+                    @include sp {
+                        font-size: 2.4rem;
+                    }
+                }
+
+                &__subtitle {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 1.5rem;
+
+                    @include sp {
+                        font-size: 1.6rem;
+                    }
+
+                }
+
+                &__text {
+                    font-size: 1.6rem;
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    .slick-prev {
+        left: -4rem;
+    }
+
+    .slick-next {
+        right: -4rem;
+    } 
+
+    .slick-prev::before {
+        background: url(../img/arrow-prev@2x.png) no-repeat center center / cover;
+        width: 20rem;
+    }
+
+    .slick-next::before {
+        background: url(../img/arrow-next@2x.png) no-repeat center center / cover;
+        width: 20rem;
+    }
+
+    .slick-dots li button:before {
+        font-size: 42px;
+    }
+
+    // contact
+
+    .contact {
+        padding: 12rem 0;
+
+        @include sp {
+            padding: 4rem 0;
+        }
+
+        &__subtitle {
+            font-size: 1.8rem;
+            text-align: center;
+
+            @include sp {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__link {
+            width: 100%;
+            margin-top: 2rem;
+            display: block;
+            padding: 1.5rem 0;
+            background-color: #FF2A2A;
+            font-size: 2.8rem;
+            text-align: center;
+            color: #fff;
+            border-radius: 50rem;
+
+            @include sp {
+                margin-top: 4rem;
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+// js-modal
+
+.js-modal__icon {
+    display: block;    
+
+    &:hover {
+        transform:scale(1.2,1.2);
+        transition:0.5s all;
+    }
+}
+
+.modaal-container {
+    width: 50rem;
+    margin: auto;
+}

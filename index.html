@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bbb-school</title>
+
+    <meta name="description" content="" /> <!-- ページの説明文 -->
+    <meta name="keywords" content="" /> <!-- ページのキーワード -->
+    <!--og-->
+    <meta property="og:type" content="website" /> <!-- ページの種類 -->
+    <meta property="og:url" content="" /> <!-- ページのURL -->
+    <meta property="og:image" content="" /> <!-- サムネイル画像URL -->
+    <meta property="og:title" content="" /> <!-- ページのタイトル -->
+    <meta property="og:description" content="" /> <!-- ページの説明文 -->
+    <meta property="og:site_name" content="" /> <!-- ページのサイト名 -->
+<!--    favicon -->
+<!--    <link rel="shortcut icon" href="" />-->
+
+<!--css-->
+    <link rel="stylesheet" href="assets/css/slick.css">  <!--    スライダー -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">  <!--    スライダー -->
+    <link rel="stylesheet" href="assets/css/modaal.min.css">  <!--    モーダル -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" media="all" />
+
+
+<!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>  <!--    スライダー -->
+    <script src="assets/js/modaal.js"></script>  <!--    モーダル -->
+    <script src="/bbb-school/assets/js/script.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <header class="container__header header js-header">
+            <h1 class="header__title">
+                <img src="/bbb-school/assets/img/title-logo.png" alt="title-logo">
+            </h1>
+            <nav class="pcNav">
+                <ul class="pcNav__list">
+                    <li class="pcNav__listItem">
+                        <a href="#about">選ばれる理由</a>
+                    </li>
+                    <li class="pcNav__listItem">
+                        <a href="#voice">受講生の声</a>
+                    </li>
+                    <li class="pcNav__listItem">
+                        <a href="#service">概要</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__hamburger hamburger">
+                <span class="hamburger__line top"></span>
+                <span class="hamburger__line middle"></span>
+                <span class="hamburger__line bottom"></span>
+            </div>
+            <nav class="header__nav nav">
+                <div class="nav__head">
+                    <h2 class="nav__headTitle">
+                        <img src="/bbb-school/assets/img/title-logo-hamburger.png" alt="title-logo">
+                    </h2>
+                    <div class="nav__headButton">
+                        <img src="/bbb-school/assets/img/hamburger.png" alt="">
+                    </div>
+                </div>
+                <p class="nav__item navAbout"><a href="#about">BBBが選ばれる理由</a></p>
+                <p class="nav__item navVoice"><a href="#voice">受講生の声</a></p>
+                <p class="nav__item navService"><a href="#service">スクールの概要</a></p>
+                <a href="#" class="nav__form">無料体験に申し込む</a>
+            </nav>
+        </header>
+        <main class="container__main main">
+            <section class="main__top">
+                <p class="main__top__title">
+                    話して学ぼう!<br>
+                    BBB英会話スクール
+                </p>
+                <a href="#" class="main__top__btn">
+                    無料体験はこちら
+                </a>
+            </section>
+            <section class="main__about about" id="about">
+                <h2 class="common__title common__title--withborder">
+                    BBBが選ばれる理由
+                </h2>
+                <div class="about__wrapper">
+                    <div class="about__wrapper__item about__wrapper__item--pc">
+                        <div class="about__wrapper__item__image about__wrapper__item__image--pc">
+                            <a href="#js-modal__pc" class="js-modal__icon js-modal__icon--pc">
+                                <img src="/bbb-school/assets/img/icon-pc.png" alt="icon-pc">
+                            </a>
+                            <div id="js-modal__pc" style="display:none;" class="js-modale">
+                                <img src="/bbb-school/assets/img/icon-pc.png" alt="icon-pc">
+                            </div>
+                        </div>
+                        <div class="about__wrapper__item__text">
+                            <p class="about__wrapper__item__text__top">オンライン対応</p>
+                            <p class="about__wrapper__item__text__bottom">24時間いつでも受講できる!</p>
+                        </div>
+                    </div>
+                    <div class="about__wrapper__item about__wrapper__item--teacher">
+                        <div class="about__wrapper__item__image about__wrapper__item__image--teacher">
+                            <a href="#js-modal__teacher" class="js-modal__icon js-modal__icon--teacher">
+                                <img src="/bbb-school/assets/img/icon-teacher.png" alt="icon-teacher">
+                            </a>
+                            <div id="js-modal__teacher" style="display:none;" class="js-modale">
+                                <img src="/bbb-school/assets/img/icon-teacher.png" alt="icon-teacher">
+                            </div>
+                        </div>
+                        <div class="about__wrapper__item__text">
+                            <p class="about__wrapper__item__text__top">講師はネイティブ</p>
+                            <p class="about__wrapper__item__text__bottom">お気に入りの講師が自由に選べる!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main__voice voice" id="voice">
+                <h2 class="common__title common__title--withborder">
+                    受講生の声
+                </h2>
+                <div class="voice__wrapper">
+                    <div class="voice__wrapper__text voice__wrapper__text--left">
+                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </div>
+                    <div class="voice__wrapper__image voice__wrapper__image--left">
+                        <img src="/bbb-school/assets/img/icon-student1.png" alt="icon-student">
+                    </div>
+                </div>
+                <div class="voice__wrapper voice__wrapper--right">
+                    <div class="voice__wrapper__text voice__wrapper__text--right">
+                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </div>
+                    <div class="voice__wrapper__image voice__wrapper__image--right">
+                        <img src="/bbb-school/assets/img/icon-student2.png" alt="icon-student">
+                    </div>
+                </div>
+                <div class="voice__wrapper voice__wrapper--left">
+                    <div class="voice__wrapper__text voice__wrapper__text--left">
+                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </div>
+                    <div class="voice__wrapper__image voice__wrapper__image--left">
+                        <img src="/bbb-school/assets/img/icon-student3.png" alt="icon-student">
+                    </div>
+                </div>
+            </section>
+            <section class="main__service service" id="service">
+                <h2 class="common__title common__title--withborder">
+                    スクールの概要
+                </h2>
+                <ul class="service__wrapper">
+                    <li class="service__wrapper__list">
+                        <h3 class="service__wrapper__list__title">レッスン内容</h3>
+                        <p class="service__wrapper__list__subtitle">LESSON</p>
+                        <p class="service__wrapper__list__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </li>
+                    <li class="service__wrapper__list">
+                        <h3 class="service__wrapper__list__title">料金プラン</h3>
+                        <p class="service__wrapper__list__subtitle">PRICE</p>
+                        <p class="service__wrapper__list__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </li>
+                    <li class="service__wrapper__list service__wrapper__list--bottom">
+                        <h3 class="service__wrapper__list__title">講師のご紹介</h3>
+                        <p class="service__wrapper__list__subtitle">TEACHER</p>
+                        <p class="service__wrapper__list__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </li>
+                    <li class="service__wrapper__list service__wrapper__list--bottom">
+                        <h3 class="service__wrapper__list__title">BBBのQ&A</h3>
+                        <p class="service__wrapper__list__subtitle">Q & A</p>
+                        <p class="service__wrapper__list__text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="main__contact contact">
+                <h2 class="common__title common__title--contactTitle">
+                    まずは無料で、BBBの英会話を試してみませんか？
+                </h2>
+                <p class="contact__subtitle">
+                    今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント!
+                </p>
+                <a href="#" class="contact__link">無料体験に申し込む</a>
+            </section>
+        </main>
+        <footer class="container__footer footer">
+            <div class="footer__wrapper wrapper">
+                <dl class="footer__wrapper__list">
+                    <dl class="footer__wrapper__list__title">コース一覧</dl>
+                    <dd class="footer__wrapper__list__contents">スタンダードプラン</dd>
+                    <dd class="footer__wrapper__list__contents">プレミアムプラン</dd>
+                    <dd class="footer__wrapper__list__contents">短期集中プラン</dd>
+                    <dd class="footer__wrapper__list__contents">日常英会話コース</dd>
+                    <dd class="footer__wrapper__list__contents">ビジネス英会話コース</dd>
+                </dl>
+                <dl class="footer__wrapper__list">
+                    <dl class="footer__wrapper__list__title">講師紹介</dl>
+                    <dd class="footer__wrapper__list__contents">講師について</dd>
+                    <dd class="footer__wrapper__list__contents">講師一覧</dd>
+                    <dd class="footer__wrapper__list__contents">講師を探す</dd>
+                </dl>
+                <dl class="footer__wrapper__list footer__wrapper__list--mediaQuery">
+                    <dl class="footer__wrapper__list__title">会社情報</dl>
+                    <dd class="footer__wrapper__list__contents">会社概要</dd>
+                    <dd class="footer__wrapper__list__contents">採用情報</dd>
+                </dl>
+                <dl class="footer__wrapper__list footer__wrapper__list--mediaQuery">
+                    <dl class="footer__wrapper__list__title">BBBについて</dl>
+                    <dd class="footer__wrapper__list__contents">よくあるご質問</dd>
+                    <dd class="footer__wrapper__list__contents">ご利用規約</dd>
+                    <dd class="footer__wrapper__list__contents">プライバシーポリシー</dd>
+                    <dd class="footer__wrapper__list__contents">お問い合わせ</dd>
+                </dl>
+            </div>
+            <p class="footer__english__school">© BBB English School</p>
+            
+        </footer>
+        <a href="#" class="toTop">
+            <img src="assets/img/totop.png" alt="toTopButton">
+        </a>
+    </div>
+</body>
+</html>

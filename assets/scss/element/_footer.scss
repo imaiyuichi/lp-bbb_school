@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 0 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #E8E8E8;
+        z-index: -1;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include sp {
+            justify-content: start;
+        }
+
+        &__list {
+
+            @include sp {
+                width: 50%;
+            }
+            
+            &__title {
+                font-size: 1.6rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+
+                @include sp {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &__contents {
+                font-size: 1.6rem;
+                margin-left: 1rem;
+
+                @include sp {
+                    font-size: 1.2rem;
+                }
+            }
+
+        &--mediaQuery {
+                @include sp {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    &__english__school {
+        font-size: 1rem;
+        margin-top: 6rem;
+        text-align: center;
+    }
+}

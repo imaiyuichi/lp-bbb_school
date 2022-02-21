@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@mixin sp {
+  @media screen and (max-width: $breakPoint) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: $breakPoint+1) {
+    @content;
+  }
+}
